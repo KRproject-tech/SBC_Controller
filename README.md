@@ -14,6 +14,24 @@ Power management (5V/6A), supercapacitor backup, RS-485 communication, and 9-axi
 
 `SBC_controller_v0` (`SBCC01-RP5`) is a 4-layer hardware HAT designed for single-board computers (**Raspberry Pi 4 Model B** and **Raspberry Pi 5**). It steps down an external `+12V` power input to `+5V` (up to `6A`) using a high-current DC-DC module, provides backup power control with a `1.5F` supercapacitor, monitors both input current and `5V` rail voltage, and integrates an RS-485 transceiver, 9-axis IMU modules, and an onboard **Seeeduino XIAO / XIAO RP2040** co-processor.
 
+## Research & Publications
+
+An earlier revision of this board paired with a **Raspberry Pi 4 Model B** was used as the onboard controller in the following research:
+
+````
+@article{YAMANO2026105370,
+title = {Deep reinforcement learning-based design with observation buffer of rolling motion for snake-like robots},
+journal = {Robotics and Autonomous Systems},
+volume = {199},
+pages = {105370},
+year = {2026},
+issn = {0921-8890},
+doi = {https://doi.org/10.1016/j.robot.2026.105370},
+url = {https://www.sciencedirect.com/science/article/pii/S0921889026000436},
+author = {Akio Yamano and Satomi Suzuki and Tsuyoshi Kimoto and Takashi Iwasa},
+}
+````
+
 ## Features
 
 - **Raspberry Pi 4 / 5 Compatibility**: Standard 40-pin GPIO header (`J1`) compatible with Raspberry Pi 4 and Raspberry Pi 5.
