@@ -17,6 +17,7 @@ Power management (5V/6A), supercapacitor backup, RS-485 communication, and 9-axi
 ## Research & Publications
 
 An earlier revision of this board paired with a **Raspberry Pi 4 Model B** was used as the onboard controller in the following research for DRL control:
+<details><summary><b>Show Publications</b></summary>
 
 ````
 @article{YAMANO2026105370,
@@ -30,7 +31,7 @@ doi = {https://doi.org/10.1016/j.robot.2026.105370},
 author = {Akio Yamano and Satomi Suzuki and Tsuyoshi Kimoto and Takashi Iwasa},
 }
 ````
-
+</details>
 Movie: https://youtu.be/ZmoQswbGZXU?si=ONRCCkeVyBDt7wkz
 
 ## Features
