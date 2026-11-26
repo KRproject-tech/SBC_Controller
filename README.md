@@ -9,6 +9,27 @@ Power management (5V/6A), supercapacitor backup, RS-485 communication, and 9-axi
   <img width="4032" height="3024" alt="IMG_1498" src="https://github.com/user-attachments/assets/4ae0e57d-78db-4820-81dc-e5336499d53b" />
 </p>
 
+## Table of Contents
+
+- [Overview](#overview)
+- [Research & Publications](#research--publications)
+- [Features](#features)
+- [Schematic](#schematic)
+- [Hardware Specifications & Pinout](#hardware-specifications--pinout)
+  - [PCB Specifications](#pcb-specifications)
+  - [External Connector Pinout (`J2` & `J3` — JST XH 4-Pin)](#external-connector-pinout-j2--j3--jst-xh-4-pin)
+  - [Raspberry Pi 40-Pin Header (`J1`) & Co-Processor (`U1`) Mapping](#raspberry-pi-40-pin-header-j1--co-processor-u1-mapping)
+  - [Solder Jumpers (`JP1` – `JP8`)](#solder-jumpers-jp1--jp8)
+- [Directory Structure](#directory-structure)
+- [PCB Ordering (JLCPCB)](#pcb-ordering-jlcpcb)
+- [PCB & PCBA Ordering (JLCPCB)](#pcb--pcba-ordering-jlcpcb)
+- [Bill of Materials (BOM) Overview](#bill-of-materials-bom-overview)
+  - [1. Pre-Assigned LCSC SMD Passives (Auto-Matched in JLCPCB PCBA)](#1-pre-assigned-lcsc-smd-passives-auto-matched-in-jlcpcb-pcba)
+  - [2. SMD ICs, Diodes & Shunt Resistor (Manual LCSC Selection or Hand-Soldering)](#2-smd-ics-diodes--shunt-resistor-manual-lcsc-selection-or-hand-soldering)
+  - [3. Modules, Connectors & Jumpers (Hand-Soldered After PCBA)](#3-modules-connectors--jumpers-hand-soldered-after-pcba)
+- [Firmware (Coming Soon)](#firmware-coming-soon)
+- [Known Issues & Future Improvements](#known-issues--future-improvements)
+
 
 ## Overview
 
