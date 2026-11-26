@@ -12,12 +12,12 @@ Power management (5V/6A), supercapacitor backup, RS-485 communication, and 9-axi
 
 ## Overview
 
-`SBC_controller_v0` (`SBCC01-RP5`) is a 4-layer hardware HAT designed for single-board computers (**Raspberry Pi 4 Model B** and **Raspberry Pi 5**). It steps down an external `+12V` power input to `+5V` (up to `6A`) using a high-current DC-DC module, provides soft-start and brownout/backup power control with a `1.5F` supercapacitor, monitors both input current and `5V` rail voltage, and integrates an RS-485 transceiver, 9-axis IMU modules, and an onboard **Seeeduino XIAO / XIAO RP2040** co-processor.
+`SBC_controller_v0` (`SBCC01-RP5`) is a 4-layer hardware HAT designed for single-board computers (**Raspberry Pi 4 Model B** and **Raspberry Pi 5**). It steps down an external `+12V` power input to `+5V` (up to `6A`) using a high-current DC-DC module, provides backup power control with a `1.5F` supercapacitor, monitors both input current and `5V` rail voltage, and integrates an RS-485 transceiver, 9-axis IMU modules, and an onboard **Seeeduino XIAO / XIAO RP2040** co-processor.
 
 ## Features
 
 - **Raspberry Pi 4 / 5 Compatibility**: Standard 40-pin GPIO header (`J1`) compatible with Raspberry Pi 4 and Raspberry Pi 5.
-- **High-Current 5V Power Supply**: Onboard `5V / 6A` DC-DC converter module (`U8`, Murata `AE-MYMGK00506ERSR-5V0`) with reverse-current protection Schottky barrier diodes (`D1`, `D2` / `SX34F`).
+- **High-Current 5V Power Supply**: Onboard `5V / 6A` DC-DC converter module (`U8`, Murata `AE-MYMGK00506ERSR-5V0`) with reverse-current protection Schottky barrier diodes (`D1`, `D2` / `SX34F`): https://akizukidenshi.com/catalog/g/g115108/.
 - **Supercapacitor Backup & Power Supervisor**:
   - `1.5F / 5.4V` supercapacitor (`C2`, `VEC5R4155QG`) for transient power loss buffering and safe shutdown support.
   - Voltage detector / reset IC (`U3`, `M51957B`) driving a dual P/N-channel MOSFET load switch (`Q1`, `TPC8407`).
