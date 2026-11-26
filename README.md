@@ -116,3 +116,10 @@ You can order this PCB directly from **JLCPCB** without extracting the archive:
 
 <img width="1037" height="999" alt="image" src="https://github.com/user-attachments/assets/f7617f10-22a3-4e58-ab9e-1b2cd5ee24ca" />
 
+
+## Firmware & BOM (Coming Soon)
+
+The following files are currently being prepared and will be added in a future update:
+
+- **Sample Firmware for Seeeduino XIAO**: Example code for monitoring `Vsense` (`5V` rail voltage) and `Isense` (`12V` input current), managing power sequences, and communicating with the Raspberry Pi.
+- **PCBA BOM (Bill of Materials)**: Complete component list with part numbers, footprints, and JLCPCB / supplier references for assembly.
