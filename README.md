@@ -33,7 +33,7 @@ Power management (5V/6A), supercapacitor backup, RS-485 communication, and 9-axi
 The full schematic is available in [`SBC_controller_sch.pdf`](SBC_controller_sch.pdf).
 
 <p align="center">
-  <img src="docs/schematic.png" alt="SBC Controller v0 Schematic" width="800">
+ <img width="1779" height="1251" alt="image" src="https://github.com/user-attachments/assets/343f1095-9304-41f8-871b-b56d95aa1894" />
 </p>
 
 ## Hardware Specifications & Pinout
