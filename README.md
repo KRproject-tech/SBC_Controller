@@ -1,9 +1,10 @@
-# SBC Controller v2 (`SBCC01-RP4` / `SBCC01-RP5`)
+# SBC Controller
+
 
 Power management, supercapacitor backup, RS-485 communication, and 9-axis IMU expansion HAT for **Raspberry Pi 4 / 5**.
 
 <p align="center">
-  <img src="docs/board_photo.jpg" alt="SBC Controller v2 mounted on Raspberry Pi" width="600">
+  <img width="4032" height="3024" alt="IMG_1498" src="https://github.com/user-attachments/assets/4ae0e57d-78db-4820-81dc-e5336499d53b" />
 </p>
 
 ## Overview
