@@ -1,6 +1,6 @@
 # SBC Controller v0 (`SBCC01-RP5`)
 
-Power management (5V/6A), supercapacitor backup, RS-485 communication, and 9-axis IMU expansion HAT for **Raspberry Pi 4 / 5**[cite: 3].
+Power management (5V/6A), supercapacitor backup, RS-485 communication, and 9-axis IMU expansion HAT for **Raspberry Pi 4 / 5**.
 
 > [!NOTE]
 > This documentation is currently an AI-generated quick overview and may contain inaccuracies. Please verify all pinouts, jumper settings, and circuit details directly against the schematic (`SBC_controller_sch.pdf`) before assembling or powering the board.
@@ -12,7 +12,7 @@ Power management (5V/6A), supercapacitor backup, RS-485 communication, and 9-axi
 
 ## Overview
 
-`SBC_controller_v0` (`SBCC01-RP5`) is a 4-layer hardware HAT designed for single-board computers (**Raspberry Pi 4 Model B** and **Raspberry Pi 5**). It steps down an external `+12V` power input to `+5V` (up to `6A`) using a high-current DC-DC module, provides soft-start and brownout/backup power control with a `1.5F` supercapacitor, monitors both input current and `5V` rail voltage, and integrates an RS-485 transceiver, 9-axis IMU modules, and an onboard **Seeeduino XIAO / XIAO RP2040** co-processor[cite: 3].
+`SBC_controller_v0` (`SBCC01-RP5`) is a 4-layer hardware HAT designed for single-board computers (**Raspberry Pi 4 Model B** and **Raspberry Pi 5**). It steps down an external `+12V` power input to `+5V` (up to `6A`) using a high-current DC-DC module, provides soft-start and brownout/backup power control with a `1.5F` supercapacitor, monitors both input current and `5V` rail voltage, and integrates an RS-485 transceiver, 9-axis IMU modules, and an onboard **Seeeduino XIAO / XIAO RP2040** co-processor.
 
 ## Features
 
@@ -50,7 +50,7 @@ The full schematic is available in [`SBC_controller_sch.pdf`](SBC_controller_sch
 
 ### External Connector Pinout (`J2` & `J3` — JST XH 4-Pin)
 
-`J2` and `J3` are wired in parallel to allow daisy-chaining power and RS-485 communication lines[cite: 3].
+`J2` and `J3` are wired in parallel to allow daisy-chaining power and RS-485 communication lines.
 
 | Pin | Signal | Description |
 | :---: | :--- | :--- |
