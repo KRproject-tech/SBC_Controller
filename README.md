@@ -9,6 +9,13 @@ Power management (5V/6A), supercapacitor backup, RS-485 communication, and 9-axi
   <img width="4032" height="3024" alt="IMG_1498" src="https://github.com/user-attachments/assets/4ae0e57d-78db-4820-81dc-e5336499d53b" />
 </p>
 
+**Communication**
+
+<a style="text-decoration: none" href="https://twitter.com/hogelungfish" target="_blank">
+    <img src="https://img.shields.io/badge/twitter-%40hogelungfish-1da1f2.svg" alt="Twitter">
+</a>
+
+
 ## Table of Contents
 
 - [Overview](#overview)
