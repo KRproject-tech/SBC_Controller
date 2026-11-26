@@ -18,7 +18,7 @@ Power management (5V/6A), supercapacitor backup, RS-485 communication, and 9-axi
 
 - **Raspberry Pi 4 / 5 Compatibility**: Standard 40-pin GPIO header (`J1`) compatible with Raspberry Pi 4 and Raspberry Pi 5.
 - **High-Current 5V Power Supply**: Onboard `5V / 6A` DC-DC converter module (`U8`, Murata `AE-MYMGK00506ERSR-5V0`) with reverse-current protection Schottky barrier diodes (`D1`, `D2` / `SX34F`): https://akizukidenshi.com/catalog/g/g115108/.
-- **Supercapacitor Backup & Power Supervisor**:
+- **Supercapacitor Backup & Power Supervisor**:　https://akizukidenshi.com/catalog/g/g109300/
   - `1.5F / 5.4V` supercapacitor (`C2`, `VEC5R4155QG`) for transient power loss buffering and safe shutdown support.
   - Voltage detector / reset IC (`U3`, `M51957B`) driving a dual P/N-channel MOSFET load switch (`Q1`, `TPC8407`).
 - **Voltage & High-Side Current Sensing**:
@@ -26,11 +26,11 @@ Power management (5V/6A), supercapacitor backup, RS-485 communication, and 9-axi
   - Resistive voltage divider (`R16`, `R18`) monitoring the `+5V` rail (`Vsense` → XIAO `D0`).
 - **Onboard Co-Processor**: Footprint for **Seeeduino XIAO / XIAO RP2040** (`U1`) for power sequence management, ADC monitoring (`Vsense` / `Isense`), and SPI/UART/I2C bridging.
 - **RS-485 Bus Interface**: `MAX485EESA+T` transceiver (`U2`) with `120Ω` termination (`R3`) and dual daisy-chainable 4-pin JST-XH connectors (`J2`, `J3`).
-- **9-Axis IMU Support**: Supports **AE-BMX055** (`U4`) and **AE-BNO055** (`U6`) modules over I2C (`3.3V` logic)[cite: 3].
+- **9-Axis IMU Support**: Supports **AE-BMX055** (`U4`) and **AE-BNO055** (`U6`) modules over I2C (`3.3V` logic): https://akizukidenshi.com/catalog/g/g116996/.
 
 ## Schematic
 
-The full schematic is available in [`SBC_controller_sch.pdf`](SBC_controller_sch.pdf)[cite: 3].
+The full schematic is available in [`SBC_controller_sch.pdf`](SBC_controller_sch.pdf).
 
 <p align="center">
   <img src="docs/schematic.png" alt="SBC Controller v0 Schematic" width="800">
