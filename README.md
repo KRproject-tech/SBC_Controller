@@ -127,7 +127,7 @@ SBC_controller_v0/
 You can order this PCB directly from **JLCPCB** without extracting the archive:
 
 1. Go to the [JLCPCB Order Page](https://cart.jlcpcb.com/quote) and click **Add gerber file**.
-2. Upload **`gerber/gerber.zip`** directly (do not unzip it).
+2. Upload **`jlcpcb/production_files/GERBER-SBC_controller.zip`** directly (do not unzip it).
 3. Confirm the auto-detected PCB parameters:
    - **Base Material**: FR-4
    - **Layers**: 4
@@ -136,13 +136,74 @@ You can order this PCB directly from **JLCPCB** without extracting the archive:
 
 <img width="1037" height="999" alt="image" src="https://github.com/user-attachments/assets/f7617f10-22a3-4e58-ab9e-1b2cd5ee24ca" />
 
+## PCB & PCBA Ordering (JLCPCB)
 
-## Firmware & BOM (Coming Soon)
+You can order both the bare PCB and **PCBA (PCB Assembly)** directly from **JLCPCB** using the files in this repository:
+
+1. **Upload Gerber Files**:
+   - Go to the [JLCPCB Order Page](https://cart.jlcpcb.com/quote) and click **Add gerber file**.
+   - Upload **`jlcpcb/production_files/GERBER-SBC_controller.zip`** directly (do not unzip it).
+   - Confirm the PCB parameters: **FR-4**, **4 Layers**, **1.6 mm Thickness**.
+2. **Enable PCB Assembly (PCBA)**:
+   - Toggle **PCB Assembly** ON.
+   - Select **Both Sides** for *Assembly Side* (SMD components are placed on both `top` and `bottom` layers in `CPL-SBC_controller.csv`; alternatively, choose **Bottom Side** or **Top Side** if you plan to hand-solder one side).
+3. **Upload BOM & CPL Files**:
+   - Click **Add BOM File** and upload **`jlcpcb/production_files/BOM-SBC_controller.csv`**.
+   - Click **Add CPL File** and upload **`jlcpcb/production_files/CPL-SBC_controller.csv`**.
+4. **Confirm Parts & Placement**:
+   - Basic SMD passives (`0805` resistors and `0603` capacitor) are pre-linked with **LCSC Part Numbers** and will be matched automatically.
+   - For SMD ICs/diodes without pre-assigned LCSC numbers (`U2`, `U3`, `U7`, `Q1`, `D1`, `D2`, `R14`), either select compatible LCSC parts manually on the JLCPCB parts confirmation screen or mark them as **Do Not Place (DNP)** to hand-solder later.
+   - Mark through-hole components, daughterboard modules (`U1`, `U4`, `U6`, `U8`, `C2`, `J1`–`J3`, `D3`), and solder jumpers (`JP1`–`JP8`) as **DNP**.
+   - Review component rotations in the 3D placement preview and proceed to checkout.
+
+## Bill of Materials (BOM) Overview
+
+The assembly data (`BOM-SBC_controller.csv` and `CPL-SBC_controller.csv`) divides the board components into three categories:
+
+### 1. Pre-Assigned LCSC SMD Passives (Auto-Matched in JLCPCB PCBA)
+
+| Designator | Value | Footprint | LCSC Part # | Qty | Layer |
+| :--- | :--- | :--- | :--- | :---: | :--- |
+| `C1` | `10µF` | `0603` (1608 Metric) | `C19702` | 1 | Bottom |
+| `R10` | `100Ω` | `0805` (2012 Metric) | `C17408` | 1 | Top |
+| `R3` | `120Ω` | `0805` (2012 Metric) | `C17437` | 1 | Bottom |
+| `R1, R16, R18` | `330Ω` | `0805` (2012 Metric) | `C17630` | 3 | Bottom (`R1`), Top (`R16, R18`) |
+| `R2, R4, R5` | `680Ω` | `0805` (2012 Metric) | `C17798` | 3 | Bottom |
+| `R11, R12` | `1kΩ` | `0805` (2012 Metric) | `C17513` | 2 | Top |
+| `R13` | `1.2kΩ` | `0805` (2012 Metric) | `C17379` | 1 | Bottom |
+| `R9` | `4.7kΩ` | `0805` (2012 Metric) | `C17673` | 1 | Bottom |
+| `R6, R7, R8, R15` | `10kΩ` | `0805` (2012 Metric) | `C17414` | 4 | Bottom (`R6–R8`), Top (`R15`) |
+
+### 2. SMD ICs, Diodes & Shunt Resistor (Manual LCSC Selection or Hand-Soldering)
+
+| Designator | Part / Value | Footprint | Layer | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| `R14` | `20mΩ` | `2512` (6332 Metric) | Top | High-side current sense shunt resistor |
+| `D1, D2` | `SX34F` | `SODFL4725X110N` | Bottom (`D1`), Top (`D2`) | Schottky barrier diodes |
+| `Q1` | `TPC8407` | `SOIC-8` | Bottom | Dual P/N-channel MOSFET load switch |
+| `U2` | `MAX485E` | `SOIC-8` | Bottom | RS-485 transceiver |
+| `U3` | `M51957B` | `SOIC-8` | Bottom | Voltage detector / system reset IC |
+| `U7` | `ZXCT1008FTA` | `SOT23-3` / `SOIC` | Bottom | High-side current sense monitor |
+
+### 3. Modules, Connectors & Jumpers (Hand-Soldered After PCBA)
+
+| Designator | Part / Module | Qty | Description |
+| :--- | :--- | :---: | :--- |
+| `U1` | Seeeduino XIAO / XIAO RP2040 | 1 | Onboard co-processor module (SMD/pin header) |
+| `U4` | AE-BMX055 | 1 | 9-axis IMU module (Akizuki Denshi) |
+| `U6` | AE-BNO055 | 1 | 9-axis IMU module (Akizuki Denshi) |
+| `U8` | AE-MYMGK00506ERSR-5V0 | 1 | Murata 5V / 6A DC-DC converter module |
+| `C2` | `1.5F` (`VEC5R4155QG`) | 1 | 5.4V backup supercapacitor |
+| `J1` | 40-Pin GPIO Header | 1 | Raspberry Pi stacking header |
+| `J2, J3` | JST XH 4-Pin (`S4B-XH-A-1`) | 2 | Horizontal connectors for `+12V` & RS-485 |
+| `D3` | `3mm LED` | 1 | Power indicator LED |
+| `JP1`–`JP8` | Solder Jumpers (Open) | 8 | PCB pads only (no physical component required) |
+
+## Firmware (Coming Soon)
 
 The following files are currently being prepared and will be added in a future update:
 
 - **Sample Firmware for Seeeduino XIAO**: Example code for monitoring `Vsense` (`5V` rail voltage) and `Isense` (`12V` input current), managing power sequences, and communicating with the Raspberry Pi.
-- **PCBA BOM (Bill of Materials)**: Complete component list with part numbers, footprints, and JLCPCB / supplier references for assembly.
 
 ## Known Issues & Future Improvements
 
