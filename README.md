@@ -1,7 +1,10 @@
 # SBC Controller
 
 
-Power management, supercapacitor backup, RS-485 communication, and 9-axis IMU expansion HAT for **Raspberry Pi 4 / 5**.
+Power management, supercapacitor backup, RS-485 communication, and 9-axis IMU expansion HAT for **Raspberry Pi 4 / 5**.　
+
+> [!NOTE]
+> This documentation is currently an AI-generated quick overview and may contain inaccuracies. Please verify all pinouts, jumper settings, and circuit details directly against the KiCad schematic (`SBC_controller_sch.pdf`) before assembling or powering the board.
 
 <p align="center">
   <img width="4032" height="3024" alt="IMG_1498" src="https://github.com/user-attachments/assets/4ae0e57d-78db-4820-81dc-e5336499d53b" />
@@ -9,7 +12,7 @@ Power management, supercapacitor backup, RS-485 communication, and 9-axis IMU ex
 
 ## Overview
 
-`SBC_controller_v2` is a 4-layer hardware HAT designed for single-board computers (**Raspberry Pi 4 Model B** and **Raspberry Pi 5**). It steps down an external 12V power input to 5V/3.5A, provides soft-start and brownout/backup power control using a 1.5F supercapacitor, monitors high-side input current, and integrates an RS-485 transceiver, 9-axis IMU modules, and an onboard **Seeeduino XIAO / XIAO RP2040** co-processor.
+`SBC_controller_v2` is a 4-layer hardware HAT designed for single-board computers (**Raspberry Pi 4 Model B** and **Raspberry Pi 5**). It steps down an external 12V power input to 5V/3.5A, provides backup power control using a 1.5F supercapacitor, monitors high-side input current, and integrates an RS-485 transceiver, 9-axis IMU modules, and an onboard **Seeeduino XIAO / XIAO RP2040** co-processor.
 
 ## Features
 
