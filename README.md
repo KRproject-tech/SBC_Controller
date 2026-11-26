@@ -123,3 +123,7 @@ The following files are currently being prepared and will be added in a future u
 
 - **Sample Firmware for Seeeduino XIAO**: Example code for monitoring `Vsense` (`5V` rail voltage) and `Isense` (`12V` input current), managing power sequences, and communicating with the Raspberry Pi.
 - **PCBA BOM (Bill of Materials)**: Complete component list with part numbers, footprints, and JLCPCB / supplier references for assembly.
+
+## Known Issues & Future Improvements
+
+- **Decoupling Capacitors (Bypass Capacitors)**: Decoupling capacitors are currently omitted near the power pins of the onboard ICs (`U2` MAX485E, `U3` M51957B, `U7` ZXCT1008FTA, etc.) and will be added in the next hardware revision to improve power rail stability and noise immunity.
