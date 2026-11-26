@@ -113,13 +113,11 @@ The full schematic is available in [`SBC_controller_sch.pdf`](SBC_controller_sch
 
 ```text
 SBC_controller_v0/
-├── README.md                      # Project documentation
-├── SBC_controller_sch.pdf         # Exported schematic (PDF)
-├── docs/                          # Images for documentation
-│   ├── board_photo.jpg            # Photo of the assembled HAT
-│   └── schematic.png              # Schematic preview image
-└── gerber/                        # Manufacturing Gerber & drill files
-    └── gerber.zip                 # Ready-to-order Gerber archive
+├── README.md                          # Project documentation
+├── SBC_controller_sch.pdf             # Exported schematic (PDF)
+└── jlcpcb/                            # Manufacturing files generated for JLCPCB PCB / PCBA
+    ├── gerber/                        # JLCPCB-formatted Gerber archive
+    └── production_files/              # PCBA assembly files (BOM-SBC_controller.csv, CPL-SBC_controller.csv)
 ```
 
 ## PCB Ordering (JLCPCB)
