@@ -100,3 +100,19 @@ SBC_controller_v0/
 │   └── schematic.png              # Schematic preview image
 └── gerber/                        # Manufacturing Gerber & drill files
     └── gerber.zip                 # Ready-to-order Gerber archive
+```
+
+## PCB Ordering (JLCPCB)
+
+You can order this PCB directly from **JLCPCB** without extracting the archive:
+
+1. Go to the [JLCPCB Order Page](https://cart.jlcpcb.com/quote) and click **Add gerber file**.
+2. Upload **`gerber/gerber.zip`** directly (do not unzip it).
+3. Confirm the auto-detected PCB parameters:
+   - **Base Material**: FR-4
+   - **Layers**: 4
+   - **PCB Thickness**: 1.6 mm
+4. Select your preferred PCB color / surface finish (e.g., Green / HASL or ENIG) and proceed to checkout.
+
+<img width="1037" height="999" alt="image" src="https://github.com/user-attachments/assets/f7617f10-22a3-4e58-ab9e-1b2cd5ee24ca" />
+
